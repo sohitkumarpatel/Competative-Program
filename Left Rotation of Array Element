@@ -1,0 +1,40 @@
+import java.util.*;
+class LeftRotationArray
+{
+	public static void main(String[]args)
+	{
+		int[] myArray=new int[] {1,2,3,4,5};
+		int[] outputArray=new int[myArray.length];
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Before Left rotating Array:");
+		/*for(int i=0;i<myArray.length;i++)
+		{
+			System.out.println(myArray[i]);
+		}*/
+		System.out.println(Arrays.toString(myArray));
+		
+		System.out.print("Enter rotatingpoint Which place you want to rotate the Array:");
+		int noOfRotations=sc.nextInt();
+		int rotatingPoint=noOfRotations;
+		int i=0;
+		while(rotatingPoint<myArray.length)
+		{
+			outputArray[i]=myArray[rotatingPoint];
+			i++;
+			rotatingPoint++;
+		}
+		rotatingPoint=0;
+		while(rotatingPoint<noOfRotations)
+		{
+			outputArray[i]=myArray[rotatingPoint];
+			i++;
+			rotatingPoint++;
+		}
+		System.out.print("Left Rotation of the Array:");
+		for(int arrElement:outputArray)
+		{
+			System.out.print(arrElement);
+		}
+
+	}
+}
