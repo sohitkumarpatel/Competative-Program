@@ -1,0 +1,38 @@
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+class Unique_Character{
+   public static void main (String[]args){
+   Scanner sc = new Scanner (System.in); 
+     String word = "";
+	 
+
+     System.out.println("Enter a word: ");
+     word = sc.nextLine();
+
+     uniqueCharacters(word); 
+}
+
+    public static void uniqueCharacters(String test){
+     String temp = "";
+	  Pattern special=Pattern.compile("[!@#$%&*()_+=|<>?{}\\[\\]~0-9]");
+	  Matcher matcher=special.matcher(test);
+	  //String str[]=test.split("");
+	  boolean b=matcher.find();
+	   if(b) 
+		    {
+			  System.out.println("Invalid String");
+		    }
+			
+	   else{ 
+	   
+           for (int i = 0; i < test.length(); i++){
+			
+            if (temp.indexOf(test.charAt(i)) == - 1){
+                  temp = temp + test.charAt(i);
+               }  
+			}
+			System.out.println(temp + " ");
+	   }
+   }
+}            
