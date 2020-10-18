@@ -1,0 +1,35 @@
+// Set is unorder collection of object in which duplicate values can not be stored.
+// Set is interface and it is implemented by HashSet,LinkedHashSetor TreeSet Class.
+
+
+
+// Find Duplicate value in Array.
+
+import java.lang.*;
+import java.util.*;
+class DuplicateElementArray
+{
+	public static void main(String[]args)
+	{
+		int[] myArray={1,2,3,4,5,6,4,3};
+		Set<Integer> uniqueNumber=new HashSet<>();
+		boolean isDuplicateExist=false;
+		for(int i=0;i<myArray.length;i++)
+		{
+			if(uniqueNumber.contains(myArray[i]))
+			{
+				isDuplicateExist=true;
+				System.out.println("Duplicate Element:"+myArray[i]);
+			}
+			else
+			{
+				uniqueNumber.add(myArray[i]);
+			}
+		}
+		if(!isDuplicateExist){
+			System.out.println(-1);
+		}
+		
+	}
+}
+  
