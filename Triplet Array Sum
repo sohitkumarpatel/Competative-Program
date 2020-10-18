@@ -1,0 +1,67 @@
+//61.	WAP to find all triplets equal to a given
+// sum in a array of integers
+import java.util.*;
+import java.lang.*;
+class TripletArraySum
+{   
+// Method-1
+    public static void arraySum(int []a ,int len, int sum)
+	{   
+	  if(a.length<3)
+		{
+		  System.out.println("Not find Triplet"); 	
+		}
+		int i=0;
+		Arrays.sort(a);
+		for(i=0;i<len;i++)
+		{
+		   int start=i+1;
+		   int end=len-1;
+		   while(start<end){
+			   if(a[i]+a[start]+a[end]==sum)
+			   {
+				   System.out.println("Triplet:"+"("+a[i]+","+a[start]+","+a[end]+")");
+				   start++;
+				   end--;
+			   }
+			   else if(a[i]+a[start]+a[end]>sum)
+			   {
+				 end--;  
+			   }
+			   else{
+				   start++;
+			   }
+		   }
+		}
+	}
+// Method-2 Butre method
+    public static void findTriplet(int[] arr,int len,int sum)
+	{
+		for(int i=0;i<len-2;i++)
+		{
+			for(int j=i+1;j<len-1;j++)
+			{
+				for(int k=j+1;k<len;k++)
+				{
+					if(arr[i]+arr[j]+arr[k]==sum){
+		
+			           System.out.println("Triplet:"+"("+arr[i]+","+arr[j]+","+arr[k]+")");
+					}
+                    
+				}
+			}
+		}
+		
+	}	
+
+	public static void main(String[]args)
+	{
+		int[] arr=new int[]{0,-1,2,-3,1};
+		int sum=-2;
+		int n=arr.length;
+		arraySum(arr,n ,sum);
+		System.out.println("other method ");
+		findTriplet(arr,n,sum);
+	}
+}
+
