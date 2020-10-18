@@ -1,0 +1,104 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+// Method-1
+
+
+//Using built in reverse() method of the StringBuilder class
+/*class Reverse_String1
+{
+	public static void main(String[]args)
+	{
+		String str="Hii I am sohit";
+		StringBuilder str1=new StringBuilder();
+		str1.append(str);
+		str1=str1.reverse();
+		System.out.print(str1);
+	}
+}
+
+
+//Method-2
+
+
+//Converting String to character array
+
+class Reverse_String1{
+	public static void main(String[]args)
+	{
+		String str="Autonomy";
+		char[] str1=str.toCharArray();
+		for(int i=str1.length-1;i>=0;i--)
+		{
+			System.out.print(str1[i]);
+		}
+	}
+}
+
+//Method-3
+
+//Using ArrayList object
+class Reverse_String1
+{
+	public static void main(String[]args)
+	{
+		String str="Mohit is a good boy";
+		char [] str1=str.toCharArray();
+		List<Character> arrlist =new ArrayList<>();
+		for(char c:str1)
+		{
+			arrlist.add(c);
+		}
+		Collections.reverse(arrlist);
+		ListIterator li=arrlist.listIterator();
+		while(li.hasNext())
+		{
+			System.out.print(li.next());
+		}
+	}
+}
+
+//Method-4
+
+
+//Java program to Reverse a String using swapping
+
+class Reverse_String1
+{
+	public static void main(String[]args)
+	{
+		String str="stunning looks";
+		char [] str1= str.toCharArray();
+		int left,right=0;
+		right=str1.length-1;
+		for(left=0;left<right;left++,right--)
+		{
+			char temp=str1[left];
+			str1[left]=str1[right];
+			str1[right]=temp;
+		}
+		for(char c:str1){
+			System.out.print(c);
+		}
+		System.out.print("");
+	}
+}
+*/
+//Method-5
+
+// Java program to demonstrate conversion from 
+// String to StringBuffer and reverse of string
+
+class Reverse_String1
+{
+	public static void main(String[]args)
+	{
+		String str="sohit";
+		StringBuffer sb=new StringBuffer(str);
+		sb.reverse();
+		System.out.print(sb);
+	}
+}
+
+	
+
